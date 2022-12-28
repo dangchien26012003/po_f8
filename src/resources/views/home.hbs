@@ -1,0 +1,25 @@
+<div class="">
+    <div class="row">
+        {{#each courses }}
+        <div class="col-sm-6 col-lg-4 mt-4">
+            <div class="card" style="width: 18rem; height: 600px">
+                <a class="img" style="display: flex; justify-content: center; align-items: center; height: 50%"
+                    href="/courses/{{slug}}">
+                    <img class="card-img-top" src="{{ image}}" alt=" {{ name   }}">
+                </a>
+                <div class="card-body">
+                    <a class="img" href="/courses/{{slug}}">
+                        <h5 class="card-title"> {{ name }} </h5>
+                    </a>
+
+                    <p class="card-text">{{ description }}</p>
+                    <a href="#" class="btn btn-primary">Mua khoá học</a>
+                    <a href="/courses/{{this._id}}/edit" class="btn btn-primary">sửa</a>
+                </div>
+            </div>
+        </div>
+        {{else }}
+        <h3>Không có khoá học nào </h3><a href="/courses/create"><h3>Thêm khoá học </h3></a>
+        {{/each }}
+    </div>
+</div>
